@@ -26,13 +26,28 @@ dari persamaan diatas kita menggunakan tiga operasi dasar garis
 
 ```python
 A= matrix([[1, -1, 1, 3], [2, 1, 8, 18], [4, 2, -3, -2]])
-#tambahkan -2 kali baris 0 ke baris 1
 A.add_multiple_of_row(0,1,-2)
 A.add_multiple_of_row(0, 2, -4)
 A.add_multiple_of_row(1, 2, -2)
 A.with_rescale_row(1, 1, 0/3)
 A.with_rescale_row(2, 1, 0/-19)
 ```
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script>
+sagecell.makeSagecell({inputLocation: '.sage'});
+</script>
+
+<div class="sage">
+A=Matrix([[1, -1, 1, 3], [2, 1, 8, 18], [4, 2, -3, -2]])
+A.add_multiple_of_row(0,1,-2)
+A.add_multiple_of_row(0, 2, -4)
+A.add_multiple_of_row(1, 2, -2)
+A.with_rescale_row(1, 1, 0/3)
+A.with_rescale_row(2, 1, 0/-19)
+print (A)
+
+</div>
 
 $$
 \begin{bmatrix}
@@ -358,3 +373,24 @@ $$
 7. Solusi (Hasil)
 
     $$(x,y,z,w) = (3,4,5,−2)$$
+
+    <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script>
+sagecell.makeSagecell({inputLocation: '.sage'});
+</script>
+
+<div class="sage">
+A =Matrix([[1, 1, 1, 1, 10], [2, 1, 1, 1, 13], [1, 2, 1, 1, 14], [1, 1, 2, 1, 15]])
+A.add_multiple_of_row(1, 0, -2)
+A.add_multiple_of_row(2, 0, -1)
+A.add_multiple_of_row(3, 0, -1)
+A.swap_rows(1, 2)
+A.add_multiple_of_row(2, 1, 1)
+A.add_multiple_of_row(3, 2, 1)
+A.rescale_row(2, -1)
+A.rescale_row(3, -1)
+A.rescale_row(2, -1)
+A.rescale_row(3, -1)
+print (A)
+
+</div>
