@@ -1,3 +1,7 @@
+---
+layout: default
+title: Tugas Matriks
+---
 # Matriks
 ## aritmatika matriks
 ## aljabar matiks
