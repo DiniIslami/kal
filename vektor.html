@@ -6,7 +6,9 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Search - My sample book</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Dekomposisi &#8212; My sample book</title>
   
   
   
@@ -55,12 +57,12 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'search';</script>
-  <script src="_static/searchtools.js"></script>
-  <script src="_static/language_data.js"></script>
-  <script src="searchindex.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'vektor';</script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Tugas" href="transformasi.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -92,7 +94,7 @@
     <div class="search-button__overlay"></div>
     <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
-      action="#"
+      action="search.html"
       method="get">
   <i class="fa-solid fa-magnifying-glass"></i>
   <input type="search"
@@ -122,8 +124,6 @@
     <div class="bd-container__inner bd-page-width">
       
       
-      
-        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -180,7 +180,7 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="gaussian.html"><strong>ELIMINASI GAUSSIAN</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="determinan.html">Matriks</a></li>
 
@@ -188,7 +188,7 @@
 
 
 <li class="toctree-l1"><a class="reference internal" href="transformasi.html">Tugas</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vektor.html">Dekomposisi</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Dekomposisi</a></li>
 </ul>
 
     </div>
@@ -260,7 +260,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fsearch.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fvektor.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -272,6 +272,54 @@
   </span>
 <span class="btn__text-container">Open issue</span>
 </a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/vektor.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
 </li>
       
   </ul>
@@ -313,7 +361,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -322,42 +372,391 @@ document.write(`
 </div>
               
               
-  <div class="bd-search-container">
-    <h1>Search</h1>
-    <noscript>
-      <div class="admonition error">
-        <p class="admonition-title">Error</p>
-        <p>Please activate JavaScript to enable the search functionality.</p>
-      </div>
-    </noscript>
-    
-<form class="bd-search d-flex align-items-center"
-      action="#"
-      method="get">
-  <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search"
-         class="form-control"
-         name="q"
-         id="search-input"
-         placeholder="Search this book..."
-         aria-label="Search this book..."
-         autocomplete="off"
-         autocorrect="off"
-         autocapitalize="off"
-         spellcheck="false"/>
-  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-    <div id="search-results"></div>
-  </div>
-  <script>
-    // Activate the search field on page load
-    let searchInput = document.querySelector("form.bd-search input");
-    if (searchInput) {
-        searchInput.focus();
-        searchInput.select();
-        console.log("[PST]: Set focus on search field.");
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Dekomposisi</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-a">Matriks A</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cari-q1">1. Cari q₁</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cari-q2">2. Cari q₂</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cari-q3">3. Cari q₃</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cari-q4">4. Cari q₄</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-akhir-q">Hasil Akhir Q</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="dekomposisi">
+<h1>Dekomposisi<a class="headerlink" href="#dekomposisi" title="Link to this heading">#</a></h1>
+<section id="matriks-a">
+<h2>Matriks A<a class="headerlink" href="#matriks-a" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A=
+\begin{bmatrix}
+1 &amp; 2 &amp; 3 &amp; 4\\
+4 &amp; 2 &amp; 3 &amp; 1\\
+2 &amp; 6 &amp; 4 &amp; 3\\
+3 &amp; 1 &amp; 2 &amp; 5
+\end{bmatrix}
+\end{split}\]</div>
+<p>Kolom-kolom:</p>
+<div class="math notranslate nohighlight">
+\[
+a_1=(1,4,2,3)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+a_2=(2,2,6,1)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+a_3=(3,3,4,2)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+a_4=(4,1,3,5)
+\]</div>
+</section>
+<hr class="docutils" />
+<section id="cari-q1">
+<h2>1. Cari q₁<a class="headerlink" href="#cari-q1" title="Link to this heading">#</a></h2>
+<p>Norm:</p>
+<div class="math notranslate nohighlight">
+\[
+\sqrt{1^2+4^2+2^2+3^2}
+=
+\sqrt{30}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+q_1=
+\left(
+\frac1{\sqrt{30}},
+\frac4{\sqrt{30}},
+\frac2{\sqrt{30}},
+\frac3{\sqrt{30}}
+\right)
+\]</div>
+</section>
+<hr class="docutils" />
+<section id="cari-q2">
+<h2>2. Cari q₂<a class="headerlink" href="#cari-q2" title="Link to this heading">#</a></h2>
+<p>Dot product:</p>
+<div class="math notranslate nohighlight">
+\[
+a_2 \cdot q_1
+=
+\frac{
+1(2)+4(2)+2(6)+3(1)
+}{\sqrt{30}}
+=
+\frac{25}{\sqrt{30}}
+\]</div>
+<p>Proyeksi:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{25}{\sqrt{30}}q_1
+=
+\left(
+\frac56,
+\frac{10}3,
+\frac53,
+\frac52
+\right)
+\]</div>
+<p>Kurangkan:</p>
+<div class="math notranslate nohighlight">
+\[
+u_2
+=
+(2,2,6,1)
+-
+\left(
+\frac56,
+\frac{10}3,
+\frac53,
+\frac52
+\right)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+=
+\left(
+\frac76,
+-\frac43,
+\frac{13}3,
+-\frac32
+\right)
+\]</div>
+<p>Norm:</p>
+<div class="math notranslate nohighlight">
+\[
+\|u_2\|
+=
+\sqrt{
+\left(\frac76\right)^2+
+\left(-\frac43\right)^2+
+\left(\frac{13}3\right)^2+
+\left(-\frac32\right)^2
+}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+=
+\sqrt{\frac{781}{36}}
+=
+\frac{\sqrt{781}}6
+\]</div>
+<p>Maka:</p>
+<div class="math notranslate nohighlight">
+\[
+q_2=
+\left(
+\frac7{\sqrt{781}},
+\frac{-8}{\sqrt{781}},
+\frac{26}{\sqrt{781}},
+\frac{-9}{\sqrt{781}}
+\right)
+\]</div>
+</section>
+<hr class="docutils" />
+<section id="cari-q3">
+<h2>3. Cari q₃<a class="headerlink" href="#cari-q3" title="Link to this heading">#</a></h2>
+<p>Hitung dot pertama:</p>
+<div class="math notranslate nohighlight">
+\[
+a_3 \cdot q_1
+=
+\frac{
+1(3)+4(3)+2(4)+3(2)
+}{\sqrt{30}}
+=
+\frac{29}{\sqrt{30}}
+\]</div>
+<p>Proyeksi ke q₁:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{29}{\sqrt{30}}q_1
+=
+\left(
+\frac{29}{30},
+\frac{58}{15},
+\frac{29}{15},
+\frac{29}{10}
+\right)
+\]</div>
+<hr class="docutils" />
+<p>Dot kedua:</p>
+<div class="math notranslate nohighlight">
+\[
+a_3 \cdot q_2
+=
+\frac{
+7(3)+(-8)(3)+26(4)+(-9)(2)
+}{\sqrt{781}}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+=
+\frac{83}{\sqrt{781}}
+\]</div>
+<p>Proyeksi ke q₂:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{83}{\sqrt{781}}q_2
+=
+\left(
+\frac{581}{781},
+\frac{-664}{781},
+\frac{2158}{781},
+\frac{-747}{781}
+\right)
+\]</div>
+<hr class="docutils" />
+<p>Kurangkan semuanya:</p>
+<div class="math notranslate nohighlight">
+\[
+u_3
+=
+a_3
+-
+\text{proj}_{q_1}
+-
+\text{proj}_{q_2}
+\]</div>
+<p>Hasil pendekatan:</p>
+<div class="math notranslate nohighlight">
+\[
+u_3
+\approx
+(1.290,0.000,-0.696,0.056)
+\]</div>
+<p>Norm:</p>
+<div class="math notranslate nohighlight">
+\[
+\|u_3\|
+\approx 1.467
+\]</div>
+<p>Maka:</p>
+<div class="math notranslate nohighlight">
+\[
+q_3
+\approx
+(0.879,0,-0.474,0.038)
+\]</div>
+</section>
+<hr class="docutils" />
+<section id="cari-q4">
+<h2>4. Cari q₄<a class="headerlink" href="#cari-q4" title="Link to this heading">#</a></h2>
+<p>Hitung:</p>
+<div class="math notranslate nohighlight">
+\[
+a_4 \cdot q_1
+=
+\frac{
+1(4)+4(1)+2(3)+3(5)
+}{\sqrt{30}}
+=
+\frac{29}{\sqrt{30}}
+\]</div>
+<p>Proyeksi:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{29}{\sqrt{30}}q_1
+=
+\left(
+\frac{29}{30},
+\frac{58}{15},
+\frac{29}{15},
+\frac{29}{10}
+\right)
+\]</div>
+<hr class="docutils" />
+<p>Dot kedua:</p>
+<div class="math notranslate nohighlight">
+\[
+a_4 \cdot q_2
+=
+\frac{
+7(4)+(-8)(1)+26(3)+(-9)(5)
+}{\sqrt{781}}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+=
+\frac{53}{\sqrt{781}}
+\]</div>
+<p>Proyeksi:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{53}{\sqrt{781}}q_2
+\approx
+(0.475,-0.543,1.764,-0.610)
+\]</div>
+<hr class="docutils" />
+<p>Dot ketiga:</p>
+<div class="math notranslate nohighlight">
+\[
+a_4 \cdot q_3
+\approx 2.136
+\]</div>
+<p>Proyeksi:</p>
+<div class="math notranslate nohighlight">
+\[
+2.136q_3
+\approx
+(1.878,0,-1.012,0.081)
+\]</div>
+<hr class="docutils" />
+<p>Kurangkan:</p>
+<div class="math notranslate nohighlight">
+\[
+u_4
+=
+a_4
+-
+\text{proj}_{q_1}
+-
+\text{proj}_{q_2}
+-
+\text{proj}_{q_3}
+\]</div>
+<p>Hasil pendekatan:</p>
+<div class="math notranslate nohighlight">
+\[
+u_4
+\approx
+(0.680,-2.324,0.315,2.629)
+\]</div>
+<p>Norm:</p>
+<div class="math notranslate nohighlight">
+\[
+\|u_4\|
+\approx 3.598
+\]</div>
+<p>Maka:</p>
+<div class="math notranslate nohighlight">
+\[
+q_4
+\approx
+(0.189,-0.646,0.088,0.731)
+\]</div>
+</section>
+<hr class="docutils" />
+<section id="hasil-akhir-q">
+<h2>Hasil Akhir Q<a class="headerlink" href="#hasil-akhir-q" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+Q
+\approx
+\begin{bmatrix}
+0.183 &amp; 0.250 &amp; 0.879 &amp; 0.189\\
+0.730 &amp; -0.286 &amp; 0 &amp; -0.646\\
+0.365 &amp; 0.931 &amp; -0.474 &amp; 0.088\\
+0.548 &amp; -0.322 &amp; 0.038 &amp; 0.731
+\end{bmatrix}
+\end{split}\]</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
     }
-  </script>
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
 
               
               
@@ -366,12 +765,41 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="transformasi.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Tugas</p>
+      </div>
+    </a>
 </div>
                 </footer>
               
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-a">Matriks A</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cari-q1">1. Cari q₁</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cari-q2">2. Cari q₂</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cari-q3">3. Cari q₃</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cari-q4">4. Cari q₄</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-akhir-q">Hasil Akhir Q</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
