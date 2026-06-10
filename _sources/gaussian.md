@@ -1,4 +1,4 @@
-## **ELIMINASI GAUSSIAN**
+## **Eliminasi Gaussian**
 Eliminasi Gaussian adalah algoritma untuk mengubah matriks menjadi bentuk eselon baris (REF). Bagian ini melengkapi pembahasan sistem persamaan linear dengan memberikan metode sistematis untuk menyederhanakan dan menyelesaikannya menggunakan matriks dan operasi baris.
 
 Tujuan utama:

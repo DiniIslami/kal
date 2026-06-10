@@ -1,4 +1,4 @@
-# **SISTEM PERSAMAAN LINEAR**
+# **Sistem Persamaan Linear**
 Sistem persamaan linear adalah kumpulan dari dua atau lebih persamaan linear dengan variabel yang sama. Tujuan utama untuk menemukan nilai variabel yang memnuhi semua persamaan secara bersamaan.
 
 contoh:
