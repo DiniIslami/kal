@@ -1,4 +1,4 @@
-# SINGULAR VALUE DECOMPOTION (SVD)
+# Singular value decomposition (SVD)
 
 Singular Value Decomposition (SVD) adalah teknik faktorisasi matriks untuk menguraikan sebuah matriks menjadi tiga matriks lainnya, mengungkapkan aspek penting dari struktural matriks aslinya. SVD digunakan dalam berbagai aplikasi, termasuk pemrosesan sinyal, kompresi gambar, dan reduksi dimensi dalam machine learning.
 
@@ -480,23 +480,31 @@ $$
 
 ## Perhitungan dengan SageMath
 
-<div id="sagecell">
-<script type="text/x-sage">
-A = matrix([
-[-7,-5],
-[1,4]
-])
-
-show(A.det())
-show(A.inverse())
-</script>
-</div>
-
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
 
 <script>
 sagecell.makeSagecell({
-    inputLocation: '#sagecell',
-    evalButtonText: 'Hitung'
+    inputLocation: '.sage'
 });
 </script>
+
+<div class="sage">
+<script type="text/x-sage">
+import numpy as np
+A = np.array([[3, 1, 1], [-1, 3, 1]])
+U, S_vektor, VT = np.linalg.svd(A)
+S_matriks = np.zeros((2, 3))
+S_matriks[:2, :2] = np.diag(S_vektor)
+hasil = U @ S_matriks @ VT
+print('matriks U')
+print(U)
+print('\nmatriks S')
+print(S_matriks)
+print('\nmatriks VT')
+print(VT)
+print('\nMatriks Awal:')
+print(A)
+print('\nHasil Rekonstruksi (U @ S @ VT):')
+print(hasil)
+</script>
+</div>
